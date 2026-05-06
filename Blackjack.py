@@ -41,14 +41,11 @@ def user_game():
        
     while dealer_game: 
          
-         if current_score==22 or current_score>=22:
+         if current_score>21:
              dealer_cards.append(dealer_card2)
              dealer_game  = False           
              print(f"hear  is dealer score {dealer_cards}={dealer_score}")  
-                
-         elif current_score >21:
-             print(dealer_score)
-             dealer_game=False 
+             
          elif dealer_score >=17:
              dealer_game= False
              dealer_cards.append(dealer_card2)
@@ -63,7 +60,7 @@ def user_game():
     elif dealer_score == current_score:
         print("            【PUSH....!】")    
         game_continue=False  
-    elif current_score<=22 and dealer_score<=22:
+    elif current_score<=21 and dealer_score<=21:
         if dealer_score>current_score:
             print("        【DEALER WIN'S...!】")
         else:
